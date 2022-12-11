@@ -34,4 +34,4 @@ Permisos de internet en AndroidManufest.xml
 Recuerdo: 
 * Un adaptador permite a un template mostrar el contenido de una colección.
 Recursos:
-* https://www.aecoctrade.es/escaparate/empresa/fuente-arevalillo/productos/8437003018008/
+* URL para las imágenes en GoogleDrive: https://drive.google.com/uc?export=view&id=IDFILE
