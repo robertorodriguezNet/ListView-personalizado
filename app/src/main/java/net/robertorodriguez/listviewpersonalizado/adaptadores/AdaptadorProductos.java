@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.bumptech.glide.Glide;
 
 import net.robertorodriguez.listviewpersonalizado.R;
 import net.robertorodriguez.listviewpersonalizado.entidades.Producto;
@@ -56,10 +59,18 @@ public class AdaptadorProductos extends ArrayAdapter<Producto> {
         // Elementos de la interfaz del ítem
         TextView denominacion = (TextView) view.findViewById(R.id.tv_denominacion);
         TextView marca = (TextView) view.findViewById(R.id.tv_marca);
+        ImageView imgMiniatrua = (ImageView) view.findViewById(R.id.iv_imagenProducto);
 
         // Establecemos la info del producto leído en los elementos del ítem
         denominacion.setText( productoLeido.getDenominacion() );
         marca.setText( Integer.toString( productoLeido.getMarca() ) );
+
+        // Uso de Glide para cargar la imagen de mniatura si no es vacía
+        if(!productoLeido.getImagen().isEmpty()) {
+            Glide.with(context)
+                    .load(productoLeido.getImagen())
+                    .into(imgMiniatrua);
+        }
 
         return view;
 

@@ -8,6 +8,7 @@ public class Producto {
     private int unidades;
     private float cantidad;
     private int medida;
+    private String imagen;                                        // URL con una imagen del producto
 
     /**
      * Constructor sin parámetros.
@@ -30,7 +31,8 @@ public class Producto {
             int marca,
             int unidades,
             float cantidad,
-            int medida) {
+            int medida,
+            String imagen) {
 
         this.id = id;
         this.denominacion = denominacion;
@@ -38,6 +40,7 @@ public class Producto {
         this.unidades = unidades;
         this.cantidad = cantidad;
         this.medida = medida;
+        this.imagen = imagen;
 
     }
 
@@ -91,5 +94,13 @@ public class Producto {
 
     public void setMedida(int medida) {
         this.medida = medida;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
     }
 }
